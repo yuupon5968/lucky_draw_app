@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ワンちゃん福引</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <div class="app-container">
+        <!-- Background Elements -->
+        <div class="background-decoration"></div>
+
+        <!-- Title Section -->
+        <div class="title-section">
+            <h1 class="gradient-title">チョビくじ</h1>
+        </div>
+
+        <!-- Dog Section -->
+        <div class="dog-wrapper">
+            <div class="speech-bubble fade-in">
+                パパいつもありがとう！
+            </div>
+            <div class="dog-container">
+                <img src="dog_full_transparent.png" alt="Cute Dog" class="dog-image" id="dog">
+                <img src="dog_closed_transparent.png" alt="Cute Dog Closed" class="dog-image" id="dog-closed"
+                    style="display: none;">
+            </div>
+        </div>
+
+        <!-- Game Section -->
+        <div class="game-area">
+            <div class="lucky-box-container">
+                <div class="lucky-box" id="box">
+                    <div class="box-lid"></div>
+                    <div class="box-body">
+                        <div class="box-decoration">福</div>
+                    </div>
+                    <div class="sparkles"></div>
+                </div>
+            </div>
+
+            <button id="start-btn" class="start-button">
+                <span class="btn-text">開始する</span>
+                <span class="btn-shine"></span>
+            </button>
+        </div>
+
+        <!-- Result Overlay -->
+        <div id="result-overlay" class="result-overlay">
+            <div class="result-content">
+                <div class="confetti-container" id="confetti"></div>
+                <div class="result-card">
+                    <div class="result-header">
+                        <span class="star">✨</span>
+                        <h2>大当たり！</h2>
+                        <span class="star">✨</span>
+                    </div>
+                    <div class="ticket-visual">
+                        <div class="ticket-inner">
+                            <div class="ticket-amount">
+                                <span id="ticket-value">2000</span>
+                                <span class="unit">円</span>
+                            </div>
+                            <div class="ticket-label">商品券</div>
+                        </div>
+                    </div>
+                    <p class="result-message">おめでとうございます！</p>
+                    <button id="close-btn" class="close-button">もう一度引く</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
